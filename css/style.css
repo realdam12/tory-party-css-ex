@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333333;
+    background-color: #fff7f0;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Jua", sans-serif;
+    font-weight: normal;
+}
+
+p {
+    font-size: 14px;
+}
+
+h2 {
+    color: #7061D5;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.balloons>span {
+    font-size: 50px;
+    display: inline-block;
+    animation: float 1s infinite ease-in-out alternate;
+}
+
+.balloons>span:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.balloons>span:nth-child(3) {
+    animation-delay: .6s;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-20px)
+    }
+}
+
+header {
+    background-color: #FFE3EC;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px;
+}
+
+header .sub {
+    color: #FF6A8D;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 10px;
+}
+
+header h1 {
+    color: #FF6A8D;
+    font-size: 37px;
+    animation: fade-up 1s 1 ease-out;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.card {
+    height: 200px;
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid #F7D283;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.c1,
+.c3 {
+    transform: rotate(-4deg);
+}
+
+.c2 {
+    transform: rotate(3deg);
+}
+
+.card:hover {
+    transform: rotate(0);
+    box-shadow: 0 10px 20px #eee;
+}
+
+.card .icon {
+    font-size: 40px;
+}
+
+.stars>span {
+    display: inline-block;
+}
+
+.star {
+    font-size: 40px;
+    animation: spin 3s linear infinite;
+}
+
+.cake-icon {
+    font-size: 92px;
+    animation: wiggle .8s linear infinite alternate;
+}
+
+.cake p {
+    margin-top: 10px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wiggle {
+    from {
+        transform: rotate(-6deg);
+    }
+
+    to {
+        transform: rotate(6deg);
+    }
+}
+
+.btns {
+    display: flex;
+    width: 330px;
+    gap: 20px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.btn {
+    border: 3px solid #FF6B8B;
+    border-radius: 100px;
+    width: 160px;
+    height: 56px;
+    align-content: center;
+    font-weight: bolder;
+}
+
+.yes {
+    background-color: #FF6A8D;
+    color: #fff;
+}
+
+.no {
+    background-color: #fff;
+    color: #FF6A8D;
+}
+
+.btn:hover {
+    background-color: #6C5CE8;
+    border-color: #6C5CE8;
+    color: #fff;
+    transform: translateY(-4deg);
+}
+
+.btn:active {
+    transform: scale(.95);
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 24px;
+    width: 600px;
+    margin: auto;
+}
+
+.plan {
+    background-color: #fff;
+    height: 200px;
+    border: #FF8A80 3px solid;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.time {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 3px 8px;
+    background-color: #FFE3EB;
+    border-radius: 12px;
+    font-size: 10px;
+    color: #FF6A8D;
+}
+
+.plan .icon {
+    display: block;
+    width: 72px;
+    height: 72px;
+    font-size: 50px;
+    position: absolute;
+    top: calc(50% - 36px);
+    left: calc(50% - 36px);
+    text-align: center;
+    transition: transform .3s;
+}
+
+.panel {
+    position: absolute;
+    background-color: #FF8A80;
+    color: #fff;
+    width: 100%;
+    padding: 16px 0;
+    align-content: center;
+    bottom: 0;
+    transform: translateY(100%);
+    overflow: hidden;
+    transition: transform .3s;
+}
+
+.plan:hover .panel {
+    transform: translateY(0);
+}
+
+.plan:hover .icon {
+    transform: translateY(-15px);
+}
+
+footer{
+    background-color: #6C5CE8;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
